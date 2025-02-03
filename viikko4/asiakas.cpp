@@ -58,9 +58,9 @@ bool Asiakas::luotonNosto(double summa)
 bool Asiakas::tiliSiirto(double summa, Asiakas & vastaanottaja)
 {
     if (summa > 0) {
-        if (kayttotili.withdraw(summa)) {  // Yritetään nostaa rahaa omalta tililtä
+        if (kayttotili.withdraw(summa)) { 
             cout << "Pankkitili: " << nimi << " siirtaa " << summa << " " << vastaanottaja.getNimi() << ":lle" << endl;
-            vastaanottaja.talletus(summa);  // Talletetaan rahaa vastaanottajan tilille
+            vastaanottaja.talletus(summa);
         } else {
             cout << "Ei riittävästi varoja siirtoon!" << endl;
         }
